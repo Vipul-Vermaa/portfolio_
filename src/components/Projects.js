@@ -142,9 +142,9 @@ const Projects = () => {
                   <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="btn btn-small">
                     <FaGithub /> View Code
                   </a>
-                  <a href={project.deploymentLink} target="_blank" rel="noopener noreferrer" className="btn btn-small btn-outline">
+                  {/* <a href={project.deploymentLink} target="_blank" rel="noopener noreferrer" className="btn btn-small btn-outline">
                     <FaEye /> Live Demo
-                  </a>
+                  </a> */}
                 </div>
                 <div className="project-tech">
                   <div className="tech-badges">
