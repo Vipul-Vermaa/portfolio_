@@ -1,0 +1,183 @@
+.skills-section {
+  background: #000000;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #2ecc71, transparent),
+    radial-gradient(2px 2px at 40px 70px, #3498db, transparent),
+    radial-gradient(1px 1px at 90px 40px, #9b59b6, transparent),
+    radial-gradient(1px 1px at 130px 80px, #e74c3c, transparent),
+    radial-gradient(2px 2px at 160px 30px, #f39c12, transparent),
+    radial-gradient(1px 1px at 200px 60px, #1abc9c, transparent),
+    radial-gradient(2px 2px at 240px 20px, #e67e22, transparent),
+    radial-gradient(1px 1px at 280px 70px, #34495e, transparent),
+    radial-gradient(2px 2px at 320px 40px, #16a085, transparent),
+    radial-gradient(1px 1px at 360px 80px, #8e44ad, transparent),
+    radial-gradient(2px 2px at 400px 30px, #27ae60, transparent),
+    radial-gradient(1px 1px at 440px 60px, #2980b9, transparent),
+    radial-gradient(2px 2px at 480px 20px, #c0392b, transparent),
+    radial-gradient(1px 1px at 520px 70px, #d35400, transparent),
+    radial-gradient(2px 2px at 560px 40px, #7f8c8d, transparent),
+    radial-gradient(1px 1px at 600px 80px, #2c3e50, transparent),
+    radial-gradient(2px 2px at 640px 30px, #e74c3c, transparent),
+    radial-gradient(1px 1px at 680px 60px, #3498db, transparent),
+    radial-gradient(2px 2px at 720px 20px, #9b59b6, transparent),
+    radial-gradient(1px 1px at 760px 70px, #f39c12, transparent),
+    radial-gradient(2px 2px at 800px 40px, #1abc9c, transparent),
+    radial-gradient(1px 1px at 840px 80px, #e67e22, transparent),
+    radial-gradient(1px 1px at 880px 30px, #34495e, transparent),
+    radial-gradient(1px 1px at 920px 60px, #16a085, transparent),
+    radial-gradient(2px 2px at 960px 20px, #8e44ad, transparent),
+    radial-gradient(1px 1px at 1000px 70px, #27ae60, transparent),
+    radial-gradient(1px 1px at 1040px 40px, #2980b9, transparent),
+    radial-gradient(1px 1px at 1080px 20px, #c0392b, transparent),
+    radial-gradient(1px 1px at 1120px 60px, #d35400, transparent),
+    radial-gradient(1px 1px at 1160px 40px, #7f8c8d, transparent),
+    radial-gradient(1px 1px at 1200px 80px, #2c3e50, transparent);
+  background-repeat: repeat;
+  background-size: 1200px 100px;
+  animation: particles 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes particles {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+  }
+}
+
+.skills-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  padding: 1.5rem;
+}
+
+.category-header {
+  margin-bottom: 1.5rem;
+}
+
+.category-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2ecc71;
+  margin-bottom: 0.5rem;
+}
+
+.category-description {
+  font-size: 0.9rem;
+  color: #bdc3c7;
+  margin: 0;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  background: rgba(52, 152, 219, 0.15);
+  border-radius: 10px;
+  padding: 0.8rem 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.skill-card:hover {
+  background: rgba(52, 152, 219, 0.25);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.2);
+}
+
+.skill-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.1);
+}
+
+.skill-name {
+  font-size: 0.75rem;
+  color: white;
+  font-weight: 500;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .skills-content {
+    padding: 2rem 1rem;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .skill-category {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-content {
+    padding: 1.2rem 0.5rem;
+  }
+  .skills-grid {
+    gap: 1rem;
+  }
+  .skill-category {
+    padding: 1rem;
+  }
+  .skills-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+  .skill-card {
+    padding: 0.6rem 0.3rem;
+  }
+  .skill-icon {
+    font-size: 1.5rem;
+  }
+  .skill-name {
+    font-size: 0.65rem;
+  }
+  .category-title {
+    font-size: 1.1rem;
+  }
+  .category-description {
+    font-size: 0.8rem;
+  }
+}
+
+.section-title {
+  color: #2ecc71;
+} 

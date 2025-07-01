@@ -1,0 +1,333 @@
+.header {
+  background: #000000;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+.photo-placeholder {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: none;
+  padding: 0;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #2ecc71, transparent),
+    radial-gradient(2px 2px at 40px 70px, #3498db, transparent),
+    radial-gradient(1px 1px at 90px 40px, #9b59b6, transparent),
+    radial-gradient(1px 1px at 130px 80px, #e74c3c, transparent),
+    radial-gradient(2px 2px at 160px 30px, #f39c12, transparent),
+    radial-gradient(1px 1px at 200px 60px, #1abc9c, transparent),
+    radial-gradient(2px 2px at 240px 20px, #e67e22, transparent),
+    radial-gradient(1px 1px at 280px 70px, #34495e, transparent),
+    radial-gradient(2px 2px at 320px 40px, #16a085, transparent),
+    radial-gradient(1px 1px at 360px 80px, #8e44ad, transparent),
+    radial-gradient(2px 2px at 400px 30px, #27ae60, transparent),
+    radial-gradient(1px 1px at 440px 60px, #2980b9, transparent),
+    radial-gradient(2px 2px at 480px 20px, #c0392b, transparent),
+    radial-gradient(1px 1px at 520px 70px, #d35400, transparent),
+    radial-gradient(2px 2px at 560px 40px, #7f8c8d, transparent),
+    radial-gradient(1px 1px at 600px 80px, #2c3e50, transparent),
+    radial-gradient(2px 2px at 640px 30px, #e74c3c, transparent),
+    radial-gradient(1px 1px at 680px 60px, #3498db, transparent),
+    radial-gradient(2px 2px at 720px 20px, #9b59b6, transparent),
+    radial-gradient(1px 1px at 760px 70px, #f39c12, transparent),
+    radial-gradient(2px 2px at 800px 40px, #1abc9c, transparent),
+    radial-gradient(1px 1px at 840px 80px, #e67e22, transparent),
+    radial-gradient(2px 2px at 880px 30px, #34495e, transparent),
+    radial-gradient(1px 1px at 920px 60px, #16a085, transparent),
+    radial-gradient(2px 2px at 960px 20px, #8e44ad, transparent),
+    radial-gradient(1px 1px at 1000px 70px, #27ae60, transparent),
+    radial-gradient(2px 2px at 1040px 40px, #2980b9, transparent),
+    radial-gradient(1px 1px at 1080px 20px, #c0392b, transparent),
+    radial-gradient(2px 2px at 1120px 60px, #d35400, transparent),
+    radial-gradient(1px 1px at 1160px 40px, #7f8c8d, transparent),
+    radial-gradient(2px 2px at 1200px 80px, #2c3e50, transparent);
+  background-repeat: repeat;
+  background-size: 1200px 100px;
+  animation: particles 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes particles {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+  }
+}
+
+.navbar {
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #2ecc71;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #fff, #2ecc71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2ecc71;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: white;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #000;
+}
+
+.btn-download {
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-download:hover {
+  background: linear-gradient(90deg, #27ae60, #229954);
+  transform: translateY(-2px);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.social-links a:hover {
+  background: #2ecc71;
+  transform: translateY(-3px);
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-photo-placeholder {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  overflow: hidden;
+}
+
+.photo-placeholder {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: none;
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+    transition: left 0.3s ease;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu a {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: white;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .profile-photo-placeholder,
+  .photo-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .profile-photo-placeholder,
+  .photo-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+} 
